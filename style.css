@@ -35,7 +35,9 @@ img{
 }
 
 h1, h2{
-    font-size: 2.8rem;
+    /* clamp(min, ideal, alto) */
+    font-size: clamp(2.8rem, 2vw + 1rem, 4rem);
+    line-height: clamp(3.6rem, 2vw + 1rem, 5rem);
     font-weight: 700;
 }
 
@@ -44,8 +46,9 @@ h2{
 }
 
 p, li, strong{
-    font-size: 1.4rem;
+    font-size: clamp(1.4rem, 1vw + 0.4rem, 2rem);
     font-weight: 400;
+    line-height: clamp(1.8rem, 1vw + 1rem, 2.5rem);
 }
 
 strong{
@@ -72,7 +75,12 @@ button{
 }
 
 @media (min-width: 1120px){
+    body{
+        background: url(./assets/background.png), lightgray 50% / cover no-repeat;
+    }
+
     main{
+        margin-top: 9rem;
         flex-direction: row;
         max-width: fit-content;
         gap: 18rem;
@@ -84,5 +92,11 @@ button{
 
     .ingredientes{
         max-width: 52.5rem;
+    }
+
+    button{
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
     }
 }
