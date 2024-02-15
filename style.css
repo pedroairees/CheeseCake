@@ -1,0 +1,88 @@
+:root{
+    --font-source-serif-4: 'Source Serif 4', serif;
+    --font-source-serif-pro: 'Source Serif Pro', serif;
+    --color-caramelo: #A54328;
+    font-family: var(--font-source-serif-pro);
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    color: var(--color-caramelo);
+    font-size: 1.6rem;
+}
+
+main{
+    max-width: 32rem;
+    margin-inline: auto;
+    padding: 5.6rem 4rem;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+img{
+    width: 100%;
+    margin-block: 3.2rem;
+}
+
+h1, h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+h2{
+    margin-bottom: 3.2rem;
+}
+
+p, li, strong{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+strong{
+    font-weight: 700;
+}
+
+ul, ol{
+    padding-left: 2.4rem;
+}
+
+ul{
+    margin-bottom: 2.4rem;
+}
+
+button{
+    font-family: var(--font-source-serif-4);
+    font-weight: 500;
+    background-color: var(--color-caramelo);
+    color: #ffffff;
+    border: 0;
+    padding: .8rem 1.2rem;
+    border-radius: .5rem;
+    margin-top: 3.2rem;
+}
+
+@media (min-width: 1120px){
+    main{
+        flex-direction: row;
+        max-width: fit-content;
+        gap: 18rem;
+    }
+
+    .recipe{
+        max-width: 43.5rem;
+    }
+
+    .ingredientes{
+        max-width: 52.5rem;
+    }
+}
