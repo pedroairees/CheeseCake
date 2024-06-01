@@ -1,102 +1,121 @@
-:root{
-    --font-source-serif-4: 'Source Serif 4', serif;
-    --font-source-serif-pro: 'Source Serif Pro', serif;
-    --color-caramelo: #A54328;
-    font-family: var(--font-source-serif-pro);
+:root {
+    font-family: "Source Serif Pro";
     font-size: 62.5%;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    --laranja: #A54328;
 }
 
-body{
-    color: var(--color-caramelo);
+body {
+    color: var(--laranja);
     font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #fff;
 }
 
-main{
+main {
     max-width: 32rem;
-    margin-inline: auto;
-    padding: 5.6rem 4rem;
     box-sizing: content-box;
+
+    margin-inline: auto;
+    padding: 5.3rem 3.7rem;
+
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
+    gap: 3.4rem;
 }
 
-img{
-    width: 100%;
-    margin-block: 3.2rem;
-}
-
-h1, h2{
-    /* clamp(min, ideal, alto) */
+h1, h2 {
     font-size: clamp(2.8rem, 2vw + 1rem, 4rem);
-    line-height: clamp(3.6rem, 2vw + 1rem, 5rem);
     font-weight: 700;
 }
 
-h2{
-    margin-bottom: 3.2rem;
+h2 {
+    margin-bottom: 2rem;
 }
 
-p, li, strong{
-    font-size: clamp(1.4rem, 1vw + 0.4rem, 2rem);
+ul > li, ol > li {
+    margin-left: 1.2rem;
+}
+
+ul {
+    margin-bottom: 1.5rem;
+}
+
+p, li, strong {
+    font-size: clamp(1.4rem, 2vw + 0.4rem, 2rem);
     font-weight: 400;
-    line-height: clamp(1.8rem, 1vw + 1rem, 2.5rem);
 }
 
-strong{
+img {
+    width: 100%;
+    margin-block: 4.6rem;
+}
+
+strong {
     font-weight: 700;
 }
 
-ul, ol{
-    padding-left: 2.4rem;
-}
 
-ul{
-    margin-bottom: 2.4rem;
-}
-
-button{
-    font-family: var(--font-source-serif-4);
+button {
+    font-family: "Source Serif 4";
     font-weight: 500;
-    background-color: var(--color-caramelo);
-    color: #ffffff;
-    border: 0;
-    padding: .8rem 1.2rem;
-    border-radius: .5rem;
-    margin-top: 3.2rem;
+    font-size: 1rem;
+    line-height: 17px;
+    text-transform: capitalize;
+    color: white;
+
+    background-color: var(--laranja);
+    transition: background-color .3s;
+
+    padding: 1.1rem;
+    margin-top: 1.7rem;
+
+    border: none;
+    border-radius: .6rem;
 }
 
-@media (min-width: 1120px){
-    body{
-        background: url(./assets/background.png), lightgray 50% / cover no-repeat;
+
+@media screen and (min-width: 1150px) {
+    body {
+        background-image: url(./assets/bg-img.jpg);
     }
 
-    main{
-        margin-top: 9rem;
+    main {
+        height: 100vh;
+        align-items: center;
         flex-direction: row;
         max-width: fit-content;
-        gap: 18rem;
+        gap: 19rem;
+
+        padding: 0 14.5rem;
     }
 
-    .recipe{
+    .presentation {
         max-width: 43.5rem;
     }
 
-    .ingredientes{
+    .preparation {
         max-width: 52.5rem;
+        min-width: 42.5rem;
     }
 
-    button{
-        padding: 1rem 2rem;
+    button {
         font-size: 1.4rem;
         line-height: 2.4rem;
+        padding: 1.6rem;
+        margin-top: 2.4rem;
+    }
+
+    button:hover {
+        background-color: #d15f3f;
     }
 }
